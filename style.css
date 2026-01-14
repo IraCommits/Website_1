@@ -1,0 +1,692 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("./fonts_project/DMSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("./fonts_project/Nunito-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+  margin-block: 0;
+}
+:where(dd[class]) {
+  margin-left: 0;
+}
+:where(ul[class]) {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+  --color--light: #ffffff;
+  --color--black: #000000;
+  --color--dark: #2c2c2c;
+  --color--light-gray: #e7e7da;
+  --color--accent-blue: #7aa4ad;
+  --color--gray: #bababa;
+  --color--border: #e3e3e3;
+  --color--dark-gray: #404040;
+  --color--dark-blue: #0a121f;
+  --color--middle-gray: #adadad;
+  --color--gray-yellowish: #d9d9ca;
+  --color-transparent: #0000001f;
+  --font-family-heading: "DM Sans", sans-serif;
+  --font-family-body: "Nunito", sans-serif;
+  --transition-duration: 0.3s;
+  --header-height: 12.5rem;
+  --padding-x: 6rem;
+  --padding-y: 8rem;
+}
+
+body {
+  width: min(100%, 108rem);
+  background-color: var(--color--light);
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+a,
+button,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  font-family: var(--font-family-body);
+  color: var(--color--light-gray);
+}
+a:hover {
+  color: var(--color--middle-gray);
+  transition: var(--transition-duration);
+}
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+.header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  height: 45rem;
+  background-image: url(/single_project_page/images_project/old-sign.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2.5rem;
+  position: relative;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+  margin-right: 2rem;
+  gap: 1.25rem;
+  flex-grow: 2;
+}
+
+.menu li a {
+  text-decoration: none;
+  font-family: var(--font-family-body);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.72rem;
+  text-transform: lowercase;
+}
+
+.right-space {
+  padding-right: 10rem;
+  padding-top: 1rem;
+}
+
+.logo {
+  width: 15rem;
+  margin-top: 1rem;
+}
+
+.text-box {
+  position: absolute;
+  top: 35rem;
+  left: 85%;
+  color: var(--color--light-gray);
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  line-height: 1.81rem;
+  font-weight: 400;
+}
+
+.text-box-bottom {
+  font-family: var(--font-family-heading);
+  font-size: 0.785rem;
+  font-weight: 400;
+  line-height: 0.875rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+main {
+  background-color: var(--color--light);
+}
+
+.about {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 3rem;
+  padding-left: var(--padding-x);
+  padding-top: var(--padding-y);
+  padding-right: var(--padding-x);
+  padding-bottom: 6rem;
+}
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 40rem;
+}
+
+.text-right {
+  display: flex;
+  flex-direction: column;
+  height: 22rem;
+  flex-shrink: 0;
+  gap: 2rem;
+  background-image: url(/single_project_page/images_project/the-new-york-public-library.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.img-container {
+  width: 40rem;
+  height: 22rem;
+  flex-shrink: 0;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.caption {
+  width: 15rem;
+  height: 1rem;
+  font-weight: 400;
+  color: var(--color--dark);
+  font-family: var(--font-family-heading);
+  font-size: 1.1rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.with-dot::before {
+  content: "•";
+  margin-right: 0.5rem;
+  font-size: 1.2em;
+}
+
+.heading {
+  width: 40rem;
+  height: 13rem;
+  color: var(--color--dark);
+  font-family: var(--font-family-heading);
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 3.375rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.column-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1.5rem 10rem 4.5rem 10rem;
+  min-height: 20rem;
+  gap: 2rem;
+  border-top: 2px solid var(--color--border);
+}
+
+.column-text-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 23rem;
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6875rem;
+}
+
+.column-text-item h3 {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+}
+
+.column-text-item p {
+  font-family: var(--font-family-body);
+}
+
+.link-list ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  list-style: none;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  width: 30rem;
+  line-height: 1.8125rem;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.link-list ul a {
+  text-decoration: none;
+  color: var(--color--dark-gray);
+  font-family: var(--font-family-body);
+  background: linear-gradient(
+    90deg,
+    white 0%,
+    var(--color--light) 20%,
+    color-mix(in srgb, var(--color--middle-gray) 60%, white) 100%
+  );
+  border-radius: 7px;
+  display: flex;
+  padding: 0.25rem 0.625rem 0.4375rem 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  box-shadow: 4px 4px 10px -2px rgba(0, 0, 0, 0.1),
+    4px -4px 15px -2px rgba(0, 0, 0, 0.1);
+}
+.link-list ul a:hover {
+  color: var(--color--dark);
+  transform: translateX(-5px);
+}
+.work-container {
+  display: flex;
+  padding: 7.5rem 0 3rem 6.35938rem;
+  justify-content: flex-end;
+
+  background-color: var(--color--dark-blue);
+  height: 44rem;
+}
+
+.gallery {
+  display: flex;
+  width: 27rem;
+  justify-content: flex-start;
+  gap: 3rem;
+  color: var(--color--light-gray);
+}
+
+.caption-light {
+  display: flex;
+  height: 100%;
+  width: 11rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.caption-title {
+  color: var(--color--light-gray);
+  font-family: var(--font-family-body);
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.caption-text {
+  color: var(--color--light-gray);
+  font-family: var(--font-family-body);
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  width: 20rem;
+}
+
+.caption-undertext {
+  color: var(--color--light-gray);
+  font-family: var(--font-family-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 0.875rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.image-container-people {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 3rem 2.6rem;
+  background-color: var(--color--light-gray);
+}
+
+.item-person {
+  flex: 0 0 20%;
+  aspect-ratio: 1 / 1;
+}
+
+.item-person.contact-info {
+  display: flex;
+  padding: 0 5rem 0 2.8rem;
+  width: 22rem;
+  height: 17rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.4365rem;
+  flex-shrink: 0;
+}
+.item-person .person-name {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  line-height: 120.833%;
+}
+.item-person .person-position {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+.link-logo {
+  height: 1rem;
+}
+.post {
+  display: flex;
+  justify-content: center;
+}
+.post-container {
+  padding: 6.5rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50rem;
+  gap: 2.2rem;
+}
+
+.comment {
+  text-align: center;
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  line-height: 120.833%;
+}
+
+.comment-author {
+  text-align: center;
+  font-family: var(--font-family-heading);
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.buttons-pseudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.article-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding: 10rem 6rem 9rem 6rem;
+  flex-shrink: 0;
+  background-color: var(--color--light-gray);
+}
+.article-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: var(--font-family-body);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5625rem;
+}
+.link-date a {
+  text-decoration: none;
+  color: var(--color--dark-gray);
+}
+.link-date a:hover {
+  color: var(--color--);
+  scale: 1.025;
+}
+.link-date {
+  display: flex;
+  justify-content: flex-start;
+  font-family: var(--font-family-body);
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 9rem 17rem;
+}
+.text-p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-family-heading);
+  font-size: 2.8rem;
+  line-height: 3.375rem;
+}
+
+.pulse-box {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  text-align: center;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-box a {
+  text-decoration: none;
+  color: var(--color--dark-gray);
+  font-family: var(--font-family-body);
+  font-size: 2rem;
+  line-height: 1.6875rem;
+  text-transform: lowercase;
+
+  padding: 0.5rem;
+  border-radius: 7px;
+  letter-spacing: 0.35rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  &:hover {
+    transform: translateY(-0.25em);
+    border-color: var(--color--dark-gray);
+    color: #5e5e5e;
+    &::before {
+      opacity: 1;
+    }
+  }
+  &::before {
+    width: 100%;
+    height: 1em;
+    position: absolute;
+    left: 0;
+    bottom: -1.35em;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0) 80%
+    );
+    opacity: 0;
+    transition: all 0.65s;
+    content: "";
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 5rem 2rem 3rem;
+  border-top: 2px solid var(--color--border);
+}
+
+.footer-top {
+  display: flex;
+  width: 100%;
+  height: 17rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40rem;
+}
+
+.footer-top img {
+  width: 15rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 13rem;
+  height: 8rem;
+  gap: 1rem;
+}
+
+.social p {
+  line-height: 0.875rem;
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.social a {
+  line-height: 0.9375rem;
+  font-family: var(--font-family-body);
+  color: var(--color--dark);
+  line-height: 1.6875rem;
+  font-size: 0.9375rem;
+  letter-spacing: 0.15rem;
+  text-decoration: none;
+}
+
+.social a:hover {
+  color: var(--color--dark-gray);
+}
+
+.link-box {
+  display: flex;
+  align-items: flex-start;
+}
+.link-box p {
+  margin-top: 0;
+  margin-bottom: 15px; /* Настройте одинаковый отступ под заголовком */
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: flex-start;
+  color: var(--color--middle-gray);
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+.link-footer {
+  display: flex;
+  justify-content: center;
+  color: var(--color--dark-gray);
+  text-transform: lowercase;
+  width: 5rem;
+  text-align: start;
+  text-decoration: none;
+  gap: 0.7rem;
+}
+/* Buttons */
+.btn {
+  font-family: var(--font-family-link1);
+  color: var(--color-accent);
+  background-color: var(--color-btn-ligher);
+  position: relative;
+  display: inline-flex;
+  padding: 0.25rem 0.625rem 0.4375rem 0.625rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  line-height: 103%;
+  letter-spacing: -0.045rem;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn.btn-background-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: left;
+}
+
+.btn.btn-background-slide:hover::before,
+.btn.btn-background-slide:focus::before {
+  transform: scaleX(1);
+}
+
+.btn.btn-background-slide {
+  transition: color 300ms ease-in-out;
+  z-index: 1;
+}
+
+.btn.btn-background-slide:hover,
+.btn.btn-background-slide:focus {
+  color: var(--color--light);
+}
