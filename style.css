@@ -117,7 +117,7 @@ a:hover {
   align-items: start;
   justify-content: space-between;
   height: 45rem;
-  background-image: url(/single_project_page/images_project/old-sign.jpg);
+  background-image: url(/images_project/old-sign.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -202,7 +202,7 @@ main {
   height: 22rem;
   flex-shrink: 0;
   gap: 2rem;
-  background-image: url(/single_project_page/images_project/the-new-york-public-library.jpg);
+  background-image: url(/images_project/the-new-york-public-library.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
