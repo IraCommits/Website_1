@@ -175,7 +175,7 @@
           </div>
           <div class="item-person">
             <img
-              src="./images_project/div.qodef-e-inner.png"
+              src="./images_project/luis-sotillo-gMgOwK352jQ-unsplash.png"
               alt="line" />
           </div>
         
@@ -328,15 +328,59 @@
         </div>
       </section>
       <section class="text-bottom">
-        <h2 class="visually-hidden">Heading</h2>
+        <h2 class="visually-hidden">Contact Us</h2>
         <div class="text-p">
           <p>
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eur
           </p>
-          <div class="pulse-box">
-            <a href="/"><span>Subscribe</span></a>
-          </div>
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  placeholder="Your Name" 
+                  required 
+                  class="form-input"
+                />
+              </div>
+              <div class="form-group">
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="Your Email" 
+                  required 
+                  class="form-input"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea 
+                id="message" 
+                name="message" 
+                placeholder="Your Message" 
+                rows="5"
+                class="form-input form-textarea"
+              ></textarea>
+            </div>
+            <div class="form-group checkbox-group">
+              <input 
+                type="checkbox" 
+                id="subscribe" 
+                name="subscribe" 
+                class="form-checkbox"
+              />
+              <label for="subscribe" class="checkbox-label">
+                Subscribe to our newsletter
+              </label>
+            </div>
+            <button type="submit" class="submit-btn">
+              <span>Send Message</span>
+            </button>
+          </form>
         </div>
       </section>
     </main>
