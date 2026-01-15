@@ -573,12 +573,11 @@ main {
   cursor: pointer;
   user-select: none;
 }
-
 .submit-btn {
   padding: 1rem 3rem;
   font-family: var(--font-family-body);
   font-size: 1.25rem;
-  text-transform: lowercase;
+  
   letter-spacing: 0.2rem;
   border: 2px solid var(--color--border);
   border-radius: 20px;
@@ -589,14 +588,12 @@ main {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   align-self: center;
 }
-
 .submit-btn:hover {
   transform: translateY(-2px);
   border-color: var(--color--dark-gray);
   color: var(--color--dark);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
-
 .submit-btn:active {
   transform: translateY(0);
 }
